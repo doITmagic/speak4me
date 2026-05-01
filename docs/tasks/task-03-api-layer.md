@@ -29,11 +29,11 @@ Orice aplicație necesită o memorie persistentă și un mod de comunicare. Aces
 2. Pentru teste, folosiți baza de date in-memory SQLite: `InitDB(":memory:")`.
 3. Instanțiați API-ul injectând un `ModelRegistry` ce conține un `MockTTS`.
 4. Folosiți `httptest.NewRecorder()` pentru a testa handlerele:
-   - [ ] Un GET pe `/voices` întoarce status 200 și un array JSON cu vocea din mock.
-   - [ ] Un POST valid pe `/synthesize` cu text și voce corectă întoarce 200 OK și mime-type audio.
-   - [ ] Un POST cu o voce inexistentă întoarce 400/404 cu mesaj JSON de eroare predictibil.
+   - [x] Un GET pe `/voices` întoarce status 200 și un array JSON cu vocea din mock.
+   - [x] Un POST valid pe `/synthesize` cu text și voce corectă întoarce 200 OK și mime-type audio.
+   - [x] Un POST cu o voce inexistentă întoarce 400/404 cu mesaj JSON de eroare predictibil.
 
 ## Criterii de Acceptanță (Definition of Done)
-- [ ] Fișierele SQLite și rutele funcționează perfect cap la cap.
-- [ ] Testele acoperă serializarea/deserializarea JSON și gestionarea erorilor HTTP.
-- [ ] Coverage rezonabil pe `handlers.go`.
+- [x] Fișierele SQLite și rutele funcționează perfect cap la cap.
+- [x] Testele acoperă serializarea/deserializarea JSON și gestionarea erorilor HTTP.
+- [x] Coverage rezonabil pe `handlers.go`.

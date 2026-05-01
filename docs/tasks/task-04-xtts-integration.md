@@ -30,6 +30,6 @@ Acest task implică complexitatea centrală: integrarea unui motor AI masiv (`ed
 3. **Scenariu:** Rulați o sintetizare scurtă de 2-3 cuvinte. Verificați că funcția întoarce array-ul binar, fără a depăși o latență de X secunde (timeout strict).
 
 ## Criterii de Acceptanță (Definition of Done)
-- [ ] Adaptorul încarcă valid un model HuggingFace compatibil local.
-- [ ] Synthesize generează audio PCM curat.
-- [ ] Procesul nu face memory leak între apeluri de sintetizare.
+- [x] Adaptorul încarcă valid un model HuggingFace compatibil local.
+- [x] Synthesize generează audio PCM curat.
+- [x] Procesul nu face memory leak între apeluri de sintetizare.

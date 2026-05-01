@@ -38,6 +38,7 @@ Pentru a menține uniformitatea arhitecturală cu prima aplicație din serie, se
 ### Arhitectura Sistemului
 
 1. **Frontend Layer (Wails + React):** Interfața utilizatorului pentru selecția vocilor, testare, managementul modelelor și setări.
+   - **Flux UI impus:** Selecția se va face strict în cascadă: utilizatorul alege **Limba** (filtrează modelele) -> alege **Modelul** (filtrează vocile din modelul respectiv) -> alege **Vocea**. Acest lucru simplifică UX-ul când numărul de modele și voci crește.
 2. **API / Input Layer (Go):** Punctul de intrare (HTTP, gRPC, sau Wails Bindings) care primește cererile.
 3. **TTS Manager (Orchestrator - Go):** Inima aplicației. Primește cererea, se uită la `VoiceID` sau `Language`, determină ce model este cel mai potrivit și rutează cererea.
 4. **Model Adapters (Interfețe - Go/Rust):** Fiecare motor TTS are un adaptor propriu care implementează o interfață comună (ex: `GenerateAudio(text)`). Adaptorul poate face FFI către Rust sau executa procese.

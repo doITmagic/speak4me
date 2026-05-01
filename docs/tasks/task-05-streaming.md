@@ -26,11 +26,11 @@ Pentru a atinge o viteză de reacție extrem de rapidă în viitoarea aplicație
 ### Pasul 5.4: Testare Funcțională Extremă (BDD Ginkgo)
 1. Construiți suita de testare `buffer_test.go` cu Ginkgo.
 2. **Cazuri de test obligatorii:**
-   - [ ] Oferiți un text mare de 10 propoziții. Verificați că este divizat corect.
-   - [ ] Simulați un TTS care generează propoziția 1 în 1s, iar propoziția 2 în 0.1s. Buffer-ul **trebuie** să asigure că stream-ul final emite audio propoziției 1 complet, înainte de a livra audio-ul propoziției 2 (păstrarea secvențialității).
-   - [ ] Testați handler-ul HTTP pentru conexiuni întrerupte (când clientul închide conexiunea, toate goroutine-urile de sintetizare din spate se opresc prompt).
+   - [x] Oferiți un text mare de 10 propoziții. Verificați că este divizat corect.
+   - [x] Simulați un TTS care generează propoziția 1 în 1s, iar propoziția 2 în 0.1s. Buffer-ul **trebuie** să asigure că stream-ul final emite audio propoziției 1 complet, înainte de a livra audio-ul propoziției 2 (păstrarea secvențialității).
+   - [x] Testați handler-ul HTTP pentru conexiuni întrerupte (când clientul închide conexiunea, toate goroutine-urile de sintetizare din spate se opresc prompt).
 
 ## Criterii de Acceptanță (Definition of Done)
-- [ ] Goroutine leak prevention activat (verificat cu tools gen `goleak`).
-- [ ] API-ul permite `transfer-encoding: chunked` corect pentru audio PCM.
-- [ ] Sistemul are o eficiență de paralelizare: dacă modelul e limitat, chunk-urile sunt calculate secvențial curat.
+- [x] Goroutine leak prevention activat (verificat cu tools gen `goleak`).
+- [x] API-ul permite `transfer-encoding: chunked` corect pentru audio PCM.
+- [x] Sistemul are o eficiență de paralelizare: dacă modelul e limitat, chunk-urile sunt calculate secvențial curat.

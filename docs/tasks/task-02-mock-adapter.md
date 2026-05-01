@@ -26,11 +26,11 @@ Crearea unui "dummy engine" care implementează `TTSProvider`. Acesta permite te
 ### Pasul 2.3: Scrierea Testelor BDD (Ginkgo & Gomega)
 1. În directorul `pkg/tts/adapters/mock/` rulați `ginkgo bootstrap` și `ginkgo generate mock_adapter`.
 2. **Cazuri de test obligatorii:**
-   - [ ] Când `Synthesize` este apelat cu un `VoiceID` corect ("mock_ro_1"), întoarce o eroare nil și lungimea array-ului de bytes este > 0.
-   - [ ] Când `Synthesize` este apelat cu un `VoiceID` incorect, întoarce o eroare "Voice not found".
-   - [ ] Funcția simulează un delay măsurabil (așteaptă cel puțin `delay_ms`).
+   - [x] Când `Synthesize` este apelat cu un `VoiceID` corect ("mock_ro_1"), întoarce o eroare nil și lungimea array-ului de bytes este > 0.
+   - [x] Când `Synthesize` este apelat cu un `VoiceID` incorect, întoarce o eroare "Voice not found".
+   - [x] Funcția simulează un delay măsurabil (așteaptă cel puțin `delay_ms`).
 
 ## Criterii de Acceptanță (Definition of Done)
-- [ ] Interfața `TTSProvider` este perfect satisfăcută de pointer-ul la `MockTTS`.
-- [ ] Suita `ginkgo -r pkg/tts/adapters/mock/` raportează 0 erori.
-- [ ] Mock-ul a fost înregistrat cu succes într-un `ModelRegistry` în cadrul unui test global de integrare.
+- [x] Interfața `TTSProvider` este perfect satisfăcută de pointer-ul la `MockTTS`.
+- [x] Suita `ginkgo -r pkg/tts/adapters/mock/` raportează 0 erori.
+- [x] Mock-ul a fost înregistrat cu succes într-un `ModelRegistry` în cadrul unui test global de integrare.

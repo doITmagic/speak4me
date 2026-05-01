@@ -41,11 +41,11 @@ Inițializarea proiectului Golang `speak4me`, configurarea suitei de testare BDD
 1. Se generează suita de teste: `cd pkg/tts && ginkgo bootstrap && ginkgo generate registry`.
 2. Se editează `registry_test.go` folosind `Describe`, `Context`, `It`.
 3. **Cazuri de test obligatorii:**
-   - [ ] Când se înregistrează un provider valid, funcția `GetProvider` trebuie să îl returneze fără eroare.
-   - [ ] Când se cere un model inexistent, `GetProvider` trebuie să întoarcă o eroare clară de tip "ModelNotFound".
-   - [ ] Când 2 provideri raportează voci, `ListAllVoices` trebuie să le unească și să returneze suma exactă a profilurilor.
+   - [x] Când se înregistrează un provider valid, funcția `GetProvider` trebuie să îl returneze fără eroare.
+   - [x] Când se cere un model inexistent, `GetProvider` trebuie să întoarcă o eroare clară de tip "ModelNotFound".
+   - [x] Când 2 provideri raportează voci, `ListAllVoices` trebuie să le unească și să returneze suma exactă a profilurilor.
 
 ## Criterii de Acceptanță (Definition of Done)
-- [ ] Tot codul se află în `pkg/tts/`.
-- [ ] Comanda `ginkgo -r pkg/tts` rulează cu succes (0 failures).
-- [ ] Structurile permit adăugarea ulterioară de modele (sunt complet decuplate de implementarea internă a unui motor AI specific).
+- [x] Tot codul se află în `pkg/tts/`.
+- [x] Comanda `ginkgo -r pkg/tts` rulează cu succes (0 failures).
+- [x] Structurile permit adăugarea ulterioară de modele (sunt complet decuplate de implementarea internă a unui motor AI specific).

@@ -1,0 +1,14 @@
+{
+  "server_port": ":8020",
+  "db_path": "speak4me.db",
+  "f5_tts": {
+    "enabled": true,
+    "models_dir": "./models/f5-tts-romanian",
+    "voices_dir": "./voices/f5"
+  },
+  "xtts": {
+    "enabled": true,
+    "server_url": "http://127.0.0.1:8021",
+    "voices_dir": "./voices/xtts"
+  }
+}

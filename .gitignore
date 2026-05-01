@@ -1,0 +1,8 @@
+bin/
+speak4me.db*
+speak4me_server
+models/
+test/
+test_*.wav
+*.wav
+.venv/
